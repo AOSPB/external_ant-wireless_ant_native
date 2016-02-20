@@ -19,7 +19,8 @@ include $(CLEAR_VARS)
 LOCAL_CFLAGS := -g -c -W -Wall -O2
 
 # needed to pull in the header file for libbt-vendor.so
-BDROID_DIR:= external/bluetooth/bluedroid
+BDROID_DIR:= system/bt
+QCOM_DIR:= $(call project-path-for,bt-vendor)/libbt-vendor
 
 # Added hci/include to give access to the header for the libbt-vendorso interface.
 LOCAL_C_INCLUDES := \
